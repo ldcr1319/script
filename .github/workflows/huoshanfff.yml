@@ -6,7 +6,7 @@ name: 抖音火山版123
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/4 * * * *'
   watch:
     types: started
   repository_dispatch:
