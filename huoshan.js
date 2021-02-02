@@ -59,8 +59,6 @@ if (isGetCookie) {
    GetCookie();
    $.done()
 } 
-$.msg($.name, process.env.HSURL+'11111111111111111111'+$.isNode())
-+$.msg($.name, process.env.HSURLX+'2222222222')
 if ($.isNode()) {
    if (process.env.HSURL && process.env.HSURL.indexOf('#') > -1) {
    hsurl = process.env.HSURL.split('#');
@@ -122,6 +120,7 @@ if (process.env.PLAYURL && process.env.PLAYURL.indexOf('#') > -1) {
   } else {
    playbody = process.env.PLAYBODY.split()
   };
+	$.msg($.name, playbody+'11111111111111111111'+$.isNode())
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
  } else {
