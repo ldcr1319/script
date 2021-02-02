@@ -65,12 +65,12 @@ if (isGetCookie) {
   console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(
       new Date().getTime() + 8 * 60 * 60
       * 1000).toLocaleString()}  =============\n`)
-  playurl = process.env.PLAYURL.split()
-  hsurl = process.env.HSURL.split()
-  hsheader = process.env.HSHEADER.split()
-  hsbody = process.env.HSBODY.split()
-  playheader = process.env.PLAYHEADER.split()
-  playbody = process.env.PLAYBODY.split()
+  playurl = process.env.PLAYURL
+  hsurl = process.env.HSURL
+  hsheader = process.env.HSHEADER
+  hsbody = process.env.HSBODY
+  playheader = process.env.PLAYHEADER
+  playbody = process.env.PLAYBODY
   hsheaderArr.push(hsheader)
   hsbodyArr.push(hsbody)
   hsurlArr.push(hsurl)
