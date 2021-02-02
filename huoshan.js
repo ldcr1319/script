@@ -60,6 +60,7 @@ if (isGetCookie) {
    $.done()
 } 
 $.msg($.name, process.env.HSURL+'11111111111111111111'+$.isNode())
++$.msg($.name, process.env.HSURLX+'2222222222')
 if ($.isNode()) {
    if (process.env.HSURL && process.env.HSURL.indexOf('#') > -1) {
    hsurl = process.env.HSURL.split('#');
