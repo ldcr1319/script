@@ -54,71 +54,7 @@ if (isGetCookie) {
    GetCookie();
    $.done()
 } 
-if ($.isNode()) {
-   if (process.env.HSURL && process.env.HSURL.indexOf('#') > -1) {
-   hsurl = process.env.HSURL.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HSURL && process.env.HSURL.indexOf('\n') > -1) {
-   hsurl = process.env.HSURL.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hsurl = process.env.HSURL.split()
-  };
-  if (process.env.HSHEADER && process.env.HSHEADER.indexOf('#') > -1) {
-   hsheader = process.env.HSHEADER.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HSHEADER && process.env.HSHEADER.indexOf('\n') > -1) {
-   hsheader = process.env.HSHEADER.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hsheader = process.env.HSHEADER.split()
-  };
-  if (process.env.HSBODY && process.env.HSBODY.indexOf('#') > -1) {
-   hsbody = process.env.HSBODY.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.HSBODY && process.env.HSBODY.indexOf('\n') > -1) {
-   hsbody = process.env.HSBODY.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   hsbody = process.env.HSBODY.split()
-  };
-if (process.env.PLAYURL && process.env.PLAYURL.indexOf('#') > -1) {
-   playurl = process.env.PLAYURL.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PLAYURL && process.env.PLAYURL.indexOf('\n') > -1) {
-   playurl = process.env.PLAYURL.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   playurl = process.env.PLAYURL.split()
-  };
-  if (process.env.PLAYHEADER && process.env.PLAYHEADER.indexOf('#') > -1) {
-   playheader = process.env.PLAYHEADER.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PLAYHEADER && process.env.PLAYHEADER.indexOf('\n') > -1) {
-   playheader = process.env.PLAYHEADER.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   playheader = process.env.PLAYHEADER.split()
-  };
-  if (process.env.PLAYBODY && process.env.PLAYBODY.indexOf('#') > -1) {
-   playbody = process.env.PLAYBODY.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PLAYBODY && process.env.PLAYBODY.indexOf('\n') > -1) {
-   playbody = process.env.PLAYBODY.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   playbody = process.env.PLAYBODY.split()
-  };
-    console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
-    console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
- } else {
-    hsurlArr.push($.getdata('hsurl'))
+hsurlArr.push($.getdata('hsurl'))
     hsheaderArr.push($.getdata('hsheader'))
     hsbodyArr.push($.getdata('hsbody'))
     playurlArr.push($.getdata('playurl'))
@@ -132,8 +68,6 @@ if (process.env.PLAYURL && process.env.PLAYURL.indexOf('#') > -1) {
     playurlArr.push($.getdata(`playurl${i}`))
 playheaderArr.push($.getdata(`playheader${i}`))
     playbodyArr.push($.getdata(`playbody${i}`))
-  }
-}
 !(async () => {
 if (!hsheaderArr[0] && !hsbodyArr[0] && !hsurlArr[0]) {
     $.msg($.name, '【提示】请先获取抖音火山版一cookie')
