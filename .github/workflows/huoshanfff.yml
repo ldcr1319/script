@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: huosoon
+    types: huoshan
 jobs:
   build:
 
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ZhiYi-N/script
+          repository: ldcr1319/script
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
