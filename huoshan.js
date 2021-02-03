@@ -310,7 +310,7 @@ async function gettoken() {
           var sign = result.data.task_info.data.task_list.find(
               item => item.task_name === 'check_in')
                   message += '🎈获取token成功\n'
-        if(ads){
+        if(ads&&ads.ad_task){
         adtoken = ads.ad_task.token
         console.log('🎈'+'获取成功，广告token='+adtoken)
         await ad();
